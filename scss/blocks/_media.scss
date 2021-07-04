@@ -71,12 +71,11 @@
 
 	.post {
 		flex-direction: column;
+		margin: 5px 0;
+		
 	}
 
-	.post__item {
-		height: 100%;
-	}
-
+	
 	.social {
 		position: static;
 		flex: 1 0 auto;
@@ -85,4 +84,3 @@
 		align-self: center;
 	}
 } 
- /* конец медиазапроса */
