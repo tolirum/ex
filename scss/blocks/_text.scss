@@ -1,0 +1,58 @@
+.text {
+	display: block;
+	position: absolute;
+	//top: 10px;
+	z-index: 3;
+	max-width: 700px;
+	color: $text;
+ }
+ 
+ .text h2 {
+	margin-top: 50px;
+	font-size: 5em;
+	font-weight: 800;
+	line-height: 1em;
+	text-transform: uppercase;
+	text-shadow: $text-shadow-1;
+ }
+ 
+ .text h3 {
+	margin-top: 20px;
+	//color: darken(.9)
+	font-size: 4em;
+	font-weight: 700;
+	line-height: 1em;
+	text-transform: uppercase;
+	max-width: 700px;
+	text-shadow: $text-shadow-1;
+ }
+ 
+ .text p {
+	font-size: 1.4em;
+	font-weight: 500;
+	line-height: 1.2;
+	margin: 20px 0;
+	max-width: 700px;
+	color: darken($text, 20%);
+	text-shadow: $text-shadow-1;
+ }
+ 
+ .explore,
+ .modal-btn {
+	display: inline-block;
+	font-size: 1em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background: $primary;
+	color: $text;
+	-webkit-transition: .5s;
+	transition: .5s;
+	box-shadow: $box-shadow-1;
+ }
+ 
+ .text > a:hover {
+	letter-spacing: 6px;
+ }

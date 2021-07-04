@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Путешествие</title>
+</head>
+<body>
+	<section class="showcase">
+		<header>
+			<h2><a class="logo" href="index.html">travel&#9728;gr&#10050;up</a></h2>
+			<div class="toggle"></div>
+		</header>
+		<div class="menu">
+			<ul>
+				<li><a class="menu-item" href="#">Главная</a></li>
+				<li><a class="menu-item" href="post.html">Новости</a></li>
+				<li><a class="menu-item" href="gallery.html">Галерея</a></li>
+				<li><a class="menu-item" href="#">Вход</a></li>
+				<li><a class="menu-item" href="#">Контакты</a></li>
+			</ul>
+		</div>
+		<img class="main-image" src="img/main.jpg" alt="">
+		<!-- <video src="video.mp4" muted loop autoplay></video> -->
+		<!-- <div class="overlay"></div> -->
+		<div class="text">
+			<h2>ялта</h2>
+			<h3>Путешествие начинается сейчас</h3>
+			<p>Большая Ялта - это 70 км вдоль Южного берега Крыма и, помимо самого города Ялта это множество населённых пунктов. Каждый из них по-своему прекрасен и достоен внимания</p>
+			<a class="explore" href="#">Тур</a>
+			
+		</div>
+		<div id="carousel">
+			<div class="photos">
+				 <img class="photo" src="img/1.jpg">
+				 <!-- <div class="photo-text"></div> -->
+				 <img class="photo" src="img/2.jpg">
+				 <img class="photo" src="img/3.jpg">
+				 <img class="photo" src="img/4.jpg">
+				 <img class="photo" src="img/5.jpg">
+			</div>
+			<div class="carousel-btn">
+				 <a href="#" class="prev">&lt;</a>
+				 <a href="#" class="next">&gt;</a>
+			</div>
+	  </div>
+		<ul class="social">
+			<li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+			<li><a href="#"><img src="img/twitter.png" alt=""></a></li>
+			<li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+		</ul>
+		
+		<div class="modal">
+			<div class="modal-content">
+				<form class="form" action="/" method="post">
+					<div class="form__group">
+						 <input class="form__control" type="email" placeholder="Ваш e-mail">
+						 <span class="form__line"></span>
+					</div>
+			  
+					<div class="form">
+						 <input class="form__control" type="password" placeholder="Пароль">
+						 <span class="form__line"></span>
+					</div>
+			  
+					<div class="form__footer  form__footer--center">
+						 <div class="form__group  form__group--md">
+							  <button class="modal-btn" type="submit">Войти</button>
+						 </div>
+			  
+						 <ul class="form__footer-list">
+							  <li>
+									<a href="signup.html">регистрация</a>
+							  </li>
+							  <li>
+									<a href="reset.html">восстановить</a>
+							  </li>
+						 </ul>
+					</div>
+			  </form>
+			  <div class="modal-close"><img src="img/close.png" width="20px" alt=""></div>
+			</div>
+		</div>
+	</section>
+	<script>
+		const menuToggle = document.querySelector('.toggle');
+		
+		const Menu = function Menu () {
+			const menuToggle = document.querySelector('.toggle');
+			const menu = document.querySelector('.menu');
+			const menuItem = document.querySelectorAll('.menu-item')
+			menuToggle.classList.toggle('active')
+			menu.classList.toggle('active')
+			menuItem.forEach(item => {
+				item.classList.toggle('active')
+				
+			})
+		}
+		const menuItem = document.querySelectorAll('.menu-item')
+		menuItem[3].addEventListener('click', ()=>{
+			modal.style.display='flex'
+			console.log(menuItem[3])
+			Menu()
+		})
+		
+		const exploreBtn = document.querySelector('.explore');
+		const carouselVisible = document.querySelector('#carousel')
+		const textVisible = document.querySelector('.text')
+		const mainImage = document.querySelector('.main-image')
+		let btn_prev = document.querySelector('.prev');
+		let btn_next = document.querySelector('.next');
+		let images = document.querySelectorAll('#carousel .photos img');
+
+		if (menuToggle) {
+		menuToggle.addEventListener('click', ()=>{
+			Menu()		
+			if(mainImage){
+				mainImage.style.display="block"
+			}
+			if(textVisible){
+				textVisible.style.display="block";
+			}
+			if(carouselVisible) {
+				carouselVisible.style.display="none";
+			}
+			})
+		}
+		//включаем карусель
+		if(exploreBtn){
+		exploreBtn.addEventListener('click', ()=>{
+			if(menuToggle.classList.value =='toggle active'){
+				Menu();	
+			}
+			mainImage.style.display="none";
+			textVisible.style.display="none";
+			carouselVisible.style.display="block";
+			})
+		}
+
+		// Карусель
+
+		let Carousel = function Carousel (images,btn_next,btn_prev) {
+			let numImage = 0;
+			if (images[numImage]) {
+			images[numImage].style.display = 'none';
+			numImage++ ;
+			if(numImage >= images.length){
+					numImage = 0; 
+			}
+			btn_prev.onclick = function(){
+			images[numImage].style.display = 'none';
+			numImage = numImage - 1;
+				if(numImage <= 0){
+				numImage = images.length - 1;
+			}
+				images[numImage].style.display = 'block';
+			}
+			btn_next.onclick = function(){
+			images[numImage].style.display = 'none';
+			numImage = numImage + 1;
+				if(numImage > images.length - 1){
+				numImage = 0;
+			}
+				images[numImage].style.display = 'block';
+			}
+			images[0].style.display='block'
+			}
+		 }
+
+		 Carousel(images,btn_next,btn_prev)
+
+		 const modalBtn = document.querySelector('.modal-close'),
+		 modal = document.querySelector('.modal')
+		 modalBtn.addEventListener('click',()=> {
+			modal.style.display='none'
+			console.log(event.target, modal.classList)
+		 })
+	</script>
+</body>
+</html>

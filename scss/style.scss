@@ -1,0 +1,18 @@
+@import 'blocks/reset';
+@import 'blocks/_vars';
+
+body {
+	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+@import 'blocks/_showcase.scss';
+@import 'blocks/_header.scss';
+@import 'blocks/_menu.scss';
+@import 'blocks/_text.scss';
+@import 'blocks/_social.scss';
+@import 'blocks/_carousel.scss';
+@import 'blocks/_gallery.scss';
+@import 'blocks/_media.scss';
+@import 'blocks/_post.scss';
+@import 'blocks/_modal.scss';
+@import 'blocks/_form.scss';

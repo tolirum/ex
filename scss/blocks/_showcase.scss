@@ -1,0 +1,61 @@
+.showcase {
+	position: absolute;
+	right: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	flex-direction: column;
+	background: #111;
+	color: #fff;
+	z-index: 2;
+ }
+ 
+ .showcase header {
+
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 40px 100px 0;
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+ }
+ 
+ .showcase video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.8;
+ }
+ 
+ .showcase .main-image, .showcase .photo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	
+ }
+
+ .main-image {
+	opacity: 0.8;
+ }
+ 
+ .showcase .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #03a9f4;
+	mix-blend-mode: overlay;
+ }

@@ -1,0 +1,55 @@
+.menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 9;
+	box-shadow:$box-shadow-1;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+ }
+ 
+ .menu.active {
+	background: rgba(255, 255, 255, 0.2);
+	//padding: 20px;
+ }
+ 
+ .menu ul {
+	//position: relative;
+	list-style: none;
+ }
+ 
+ .menu-item {
+	
+	display: none;
+	
+ }
+ 
+ .menu-item.active {
+	display: block;
+	padding: 5px 100px;
+
+	position: relative;
+	width: 100%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 700;
+	line-height: 2;
+
+	font-size: 2em;
+	color: $primary;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: $text-shadow-1;
+	transition: .5s;
+	
+	
+ }
+ 
+ .menu-item.active:hover {
+	color: $secondary;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
+	box-shadow: $box-shadow-1;
+	/* color: #03a9f4; */
+ }

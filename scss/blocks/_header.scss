@@ -1,0 +1,36 @@
+.logo {
+	font-size: 2em;
+	//padding: 5px 5px;
+	border-radius: 11px;
+	color: $primary;
+	text-shadow: $text-shadow-1;
+	font-weight: 700px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: .5s;
+ }
+
+ .logo:hover {
+	box-shadow: $box-shadow-1;
+ }
+ 
+ .toggle {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background: url(/img/menu.png);
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: center;
+	cursor: pointer;
+	box-shadow: $box-shadow-1;
+ }
+ 
+ .toggle.active {
+	position: relative;
+	background: url(/img/close.png);
+	background-repeat: no-repeat;
+	background-size: 25px;
+	background-position: center;
+	cursor: pointer;
+ }

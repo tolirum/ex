@@ -1,0 +1,88 @@
+@media (max-width: 798px) {
+  
+	.showcase {
+		padding: 5px;
+	}
+
+	.showcase header {
+		position: static;
+		padding: 5px;
+	}
+
+	.showcase img {
+	  top: 20px;
+	}
+ 
+	.showcase .text {
+	  top: 50px
+	}
+
+	.text {
+		position: static;
+	}
+ 
+	.text h2 {
+	  font-size: 3em;
+	}
+	.text h3 {
+	  font-size: 2em;
+	}
+ 
+	#carousel .carousel-btn a {
+	margin: 0px;
+
+	}
+	.logo {
+	font-size: 1.5em;
+	}
+
+	.toggle {
+		width: 40px;
+		height: 40px;
+		filter: invert(0);
+	}
+
+	.toggle.active {
+		
+		filter: invert(0);
+	}
+
+	.menu.active {
+		box-shadow:none;
+		background: none;
+		position: static;
+		display: flex;
+		//align-self: flex-end;
+		align-items:center;
+		justify-content: center;
+		padding: 0;
+		width: 100%;
+	}
+ 
+	.menu-item.active {
+		text-align: center;
+		//display: flex;
+		width: 100%;
+		padding: 5px auto;
+		margin: 5px;
+		box-shadow: $box-shadow-1;
+		background: rgba(255, 255, 255, .2);
+	}
+
+	.post {
+		flex-direction: column;
+	}
+
+	.post__item {
+		height: 100%;
+	}
+
+	.social {
+		position: static;
+		flex: 1 0 auto;
+		align-items:flex-end;
+		justify-content: center;
+		align-self: center;
+	}
+} 
+ /* конец медиазапроса */
