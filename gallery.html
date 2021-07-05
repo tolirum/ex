@@ -154,15 +154,15 @@
 			  
 						 <ul class="form__footer-list">
 							  <li>
-									<a href="signup.html">регистрация</a>
+									<a href="index.html">регистрация</a>
 							  </li>
 							  <li>
-									<a href="reset.html">восстановить</a>
+									<a href="index.html">восстановить</a>
 							  </li>
 						 </ul>
 					</div>
 			  </form>
-			  <div class="modal-close"><img src="img/close.png" width="20px" alt=""></div>
+			  <div class="modal-close"><img src="img/close-modal.png" width="20px" alt=""></div>
 			</div>
 		</div>
 
@@ -189,9 +189,9 @@
 			Menu()
 		})
 		
-		let btn_prev = document.querySelector('.prev');
-		let btn_next = document.querySelector('.next');
-		let images = document.querySelectorAll('#carousel .photos img');
+		// let btn_prev = document.querySelector('.prev');
+		// let btn_next = document.querySelector('.next');
+		// let images = document.querySelectorAll('#carousel .photos img');
 
 		if (menuToggle) {
 		menuToggle.addEventListener('click', ()=>{
@@ -257,6 +257,12 @@
 			modal.style.display='none'
 			console.log(event.target, modal.classList)
 		 })
+
+         const modalSend = document.querySelector('.modal-btn')
+         modalSend.addEventListener('click', (e)=>{
+             e.preventDefault();
+             console.log(e.currentTarget)
+         })
 
     </script>
 </body>
